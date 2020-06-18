@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageFragment">
+
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.bestdemoexample.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_imageDemoFragment"
+            app:destination="@id/imageDemoFragment"
+            app:enterAnim="@anim/push_up_in"
+            app:exitAnim="@anim/push_up_out"
+            app:popEnterAnim="@anim/push_down_in"
+            app:popExitAnim="@anim/push_down_out" />
+        <action
+            android:id="@+id/action_imageFragment_to_videoFragment"
+            app:destination="@id/videoFragment"
+            app:enterAnim="@anim/push_up_in"
+            app:exitAnim="@anim/push_up_out"
+            app:popEnterAnim="@anim/push_down_in"
+            app:popExitAnim="@anim/push_down_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageDemoFragment"
+        android:name="com.example.bestdemoexample.ImageDemoFragment"
+        android:label="fragment_image_demo"
+        tools:layout="@layout/fragment_image_demo" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.bestdemoexample.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+</navigation>
